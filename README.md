@@ -31,11 +31,11 @@ Actuellement chez *1&1 Ionos*, le *Virtual Private Server* (VPS) possède les st
 Au niveau *hardware* (materiel), les caractéristiques physiques actuelles sont amplement suffisantes, l'offre *Serveur Virtuel Cloud XL* n'a donc pas besoin d'être modifiée.
 
 Niveau *software* (logiciel), Debian 9 sera mis à jour pour la version 10 actuelle.
-Plesk quand à lui ne sera plus nécessaire, vous pourrez donc faire des économies en le retirant de votre forfait si celui-ci était en supplément.
+Plesk quant à lui ne sera plus nécessaire, vous pourrez donc faire des économies en le retirant de votre forfait si celui-ci était en supplément.
 
 ## Base de données (2)
 
-Actuellement sous *MySQL*, la base de données (BDD) sera passée sous **PostgreSQL** pour une raison de **performances**. Les tables et les champs obsolètes seront supprimées (exemple : news datant de 2016) pour une meilleure **fluidité**.
+Actuellement sous *MySQL*, la base de données (BDD) sera passée sous **PostgreSQL** pour une raison de **performances**. Les tables et les champs obsolètes seront supprimés (exemple : news datant de 2016) pour une meilleure **fluidité**.
 
 > Pour une comparaison de MySQL et PostgreSQL, voir [par ici](https://www.oracle.com/fr/database/postgresql-versus-mysql.html)
 
