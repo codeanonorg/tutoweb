@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'wagtail.admin',
     'wagtail.core',
 
+    'rest_framework',
     'modelcluster',
     'taggit',
+    'corsheaders',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -129,6 +132,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+# CORS
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:8080",
+    "https://tutoweb.org",
+]
+CORS_URLS_REGEX = r'^/api'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
