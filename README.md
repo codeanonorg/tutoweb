@@ -4,7 +4,7 @@
 
 Cette page a pour but d'expliquer simplement ce qui se cachera derrière la future version du site *Tutoweb*. Elle pourra aussi servir de feuille de route à la reconstruction du site grâce à l'ajout de deadlines très prochainement.
 
-![](schema.png)
+![](https://cdn.discordapp.com/attachments/588645934850637824/668489826974040075/schema.png)
 
 ## Rappel des objectifs :
 * Objectifs du nouveau site
