@@ -45,13 +45,15 @@
   },
   "dependencies": {
     "axios": "^0.19.1",
+    "camelcase-keys": "^6.1.1",
     "preact": "^10.0.0",
     "preact-jsx-chai": "^3.0.0",
     "preact-helmet": "^4.0.0-alpha-3",
     "preact-markup": "^2.0.0",
     "preact-render-to-string": "^5.0.6",
     "preact-router": "^3.0.1",
-    "preact-bulma": "^1.2.0-next.1"
+    "preact-bulma": "^1.2.0-next.1",
+    "preact-html": "^2.0.3"
   },
   "peerDependencies": {
     "prettier": ">1.0.0",
