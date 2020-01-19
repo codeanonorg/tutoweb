@@ -69,7 +69,7 @@ Le front-end du site Tutoweb (sa partie visible) restera en **html**/**CSS**.
 
 La structure globale du site restera à priori la même, de même pour la charte graphique :
 
-![](https://discordapp.com/channels/371956858761773056/588645934850637824/668495143401422858)
+![](https://media.discordapp.net/attachments/588645934850637824/668495143174799371/couleurs.png)
 
 L'étudiant en PACES, conservera donc **les mêmes repères**.
 
