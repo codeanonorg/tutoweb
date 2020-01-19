@@ -37,34 +37,39 @@ Plesk quand à lui ne sera plus nécessaire, vous pourrez donc faire des économ
 
 Actuellement sous *MySQL*, la base de données sera passée sous **PostgreSQL** pour une raison de **performances**. Les tables et les champs obsolètes seront supprimées (exemple : news datant de 2016) pour une meilleure **fluidité**.
 
+> Pour une comparaison de MySQL et PostgreSQL, voir [par ici](https://www.oracle.com/fr/database/postgresql-versus-mysql.html)
+
 Sa gestion manuelle sera **simplifiée** par le gestionnaire de contenu (CMS) **Wagtail** qui remplacera l'actuel *PHPMyAdmin* (cf section **Wagtail (5)**). De même, les scripts Python actuellement implémentés pour facilité l'organisation de la BDD (ex: sélection des voeux) seront **révisés** et **optimisés**. D'autres comme l'algorithme de parrainage sera implémenté au site web.
 
 ## Docker (3)
 
-Le serveur utilisera le principe de **conteneurisation**. A l'aide du logiciel *open-source* **Docker**, la base de données (BDD) ainsi que le serveur web seront isolés dans des conteneurs comprenant des environnements d'exécutions **complets** (binaires accompagnés de leurs librairies et de leur fichiers de configuration). Docker permettra :
+Le serveur utilisera le principe de **conteneurisation**. A l'aide du logiciel *open-source* **[Docker](https://hub.docker.com/)**, la base de données (BDD) ainsi que le serveur web seront isolés dans des conteneurs comprenant des environnements d'exécutions **complets** (binaires accompagnés de leurs librairies et de leur fichiers de configuration). Docker permettra :
 - Une plus grande **stabilité**, grâce à la virtualisation de l'application et de ses dépendances
 - Une plus grande **portabilité**, qui facilitera d'éventuelles migrations futures
 - Une augmentation des **performances**, dûe à la rapidité de déploiement des conteneurs
 - Une meilleure **sécurité**, grâce à l'isolement que procure ces conteneurs.
 
+> Pour aller [plus loin](https://www.supinfo.com/articles/single/104-qu-est-que-docker-pourquoi-est-il-different-machines-virtuelles)
+
 ## Django (4)
 
 > *"Django makes it easier to build better Web apps more quickly and with less code."*
 
-Il s'agira là du coeur de Tutoweb. Libre et open-source, le web-framework **Django** est un logiciel permettant le développement de web services. Sa particularité réside dans son langage d'implémentation et d'utilisation, **Python**, qui lui offre en plus d'une utilisation **simple**, un mélange alliant **flexibilité**, **rapidité** et **sécurité**.
+Il s'agira là du coeur de Tutoweb. Libre et open-source, le web-framework **[Django](https://www.djangoproject.com/)** est un logiciel permettant le développement de web services. Sa particularité réside dans son langage d'implémentation et d'utilisation, **Python**, qui lui offre en plus d'une utilisation **simple**, un mélange alliant **flexibilité**, **rapidité** et **sécurité**.
 
 En pratique, Django [...]
 
 ## Wagtail (5)
 
-Pour une meilleur **synergie** avec Django, Plesk sera remplacé par le CMS **Wagtail**. 
+Pour une meilleur **synergie** avec Django, Plesk sera remplacé par le CMS **[Wagtail](https://wagtail.io)**. 
 
 ## *Front-end*
 
-Le front-end du site Tutoweb (sa partie visible) restera en html/CSS.
+Le front-end du site Tutoweb (sa partie visible) restera en **html**/**CSS**.
 
 La structure globale du site restera à priori la même, de même pour la charte graphique :
 
+![](https://discordapp.com/channels/371956858761773056/588645934850637824/668495143401422858)
 
 L'étudiant en PACES, conservera donc **les mêmes repères**.
 
