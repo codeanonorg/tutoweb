@@ -20,7 +20,8 @@ Cette page a pour but d'expliquer simplement ce qui se cachera derrière la futu
 ## Le serveur (1)
 
 Actuellement chez *1&1 Ionos*, le *Virtual Private Server* (VPS) possède les statistiques suivantes :
-| Nom      | Valeur|
+
+| Nom      | Valeur     |
 |----------|------------|
 | CPU      | 4 vCore    |
 |  RAM     | 8 Go       |
