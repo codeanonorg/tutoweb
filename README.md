@@ -4,7 +4,7 @@
 
 Cette page a pour but d'expliquer simplement ce qui se cachera derrière la future version du site *Tutoweb*. Elle pourra aussi servir de feuille de route à la reconstruction du site grâce à l'ajout de deadlines très prochainement.
 
-![](https://cdn.discordapp.com/attachments/588645934850637824/668489826974040075/schema.png)
+![Schéma de l'architecture](.github/schema.png)
 
 ## Rappel des objectifs :
 * Objectifs du nouveau site
@@ -69,7 +69,7 @@ Le front-end du site Tutoweb (sa partie visible) restera en **html**/**CSS**.
 
 La structure globale du site restera à priori la même, de même pour la charte graphique :
 
-![](https://media.discordapp.net/attachments/588645934850637824/668495143174799371/couleurs.png)
+![](.github/couleurs.png)
 
 L'étudiant en PACES, conservera donc **les mêmes repères**.
 
