@@ -4,7 +4,7 @@
 
 Cette page a pour but d'expliquer simplement ce qui se cachera derrière la future version du site *Tutoweb*. Elle pourra aussi servir de feuille de route à la reconstruction du site grâce à l'ajout de deadlines très prochainement.
 
-![Schéma de l'architecture](.github/schema.png)
+![Schéma de l'architecture](https://raw.githubusercontent.com/codeanonorg/tutoweb/master/.github/schema.png)
 
 ## Rappel des objectifs :
 * Objectifs du nouveau site
@@ -71,7 +71,7 @@ Le front-end du site Tutoweb (sa partie visible) restera en **html**/**CSS**.
 
 La structure globale du site restera à priori la même, de même pour la charte graphique :
 
-![palette de couleurs](.github/couleurs.png)
+![palette de couleurs](https://raw.githubusercontent.com/codeanonorg/tutoweb/master/.github/couleurs.png)
 
 L'étudiant en PACES, conservera donc **les mêmes repères**.
 
