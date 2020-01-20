@@ -52,8 +52,7 @@
     "preact-markup": "^2.0.0",
     "preact-render-to-string": "^5.0.6",
     "preact-router": "^3.0.1",
-    "preact-bulma": "^1.2.0-next.1",
-    "preact-html": "^2.0.3"
+    "preact-bulma": "^1.2.0-next.1"
   },
   "peerDependencies": {
     "prettier": ">1.0.0",

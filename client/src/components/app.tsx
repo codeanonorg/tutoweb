@@ -20,10 +20,15 @@ const App: preact.FunctionalComponent = () => {
   return (
     <div id="app">
       <Helmet
-        meta={[{ name: "viewport", content: "minimum-scale=1, initial-scale=1, width=device-width" }]}
-        title="Tutoweb"
-        titleTemplate="Tutoweb - %s"
-        defaultTitle="Accueil"
+        meta={[{
+          name: "viewport",
+          content: "minimum-scale=1, initial-scale=1, width=device-width"
+        }, {
+          name: "theme",
+          content: "#665344"
+        }]}
+        titleTemplate="TAT - %s"
+        defaultTitle="TAT - Accueil"
       />
       <Header/>
       <Router onChange={handleRoute}>
