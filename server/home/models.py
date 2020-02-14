@@ -9,6 +9,7 @@ from home import blocks
 
 
 class HomePage(Page):
+    default_slug = "home"
     content_panels = Page.content_panels + [
         FieldPanel("subtitle"),
         StreamFieldPanel("content"),
