@@ -60,7 +60,6 @@ export interface HomePage extends Page {
 
 export async function getPage(id: number): Promise<Page> {
   const response = await axios.get<Page>(`pages/${id}`);
-  // const { meta: { type } } = response.data;
   return response.data;
 }
 
@@ -70,8 +69,11 @@ export async function getImage(id: number): Promise<Image> {
   return data;
 }
 
-export function isHomePage(page: Page): page is HomePage {
-  return page.meta.type === "home.HomePage";
+export function isHomePage(page?: Page|null): page is HomePage {
+  if (page?.meta) {
+    return page.meta.type === "home.HomePage"
+  }
+  return false;
 }
 
 export function isRichTextBlock(block: StreamBlock): block is RichTextBlock {

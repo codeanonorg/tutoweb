@@ -1,7 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="501c3f46-cdbb-4801-872d-8b4fb0df2412" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/tutoweb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/flexible/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/api/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/server/.media/images/Screenshot_20200209_104921.max-165x165.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../server/server/.media/original_images/Screenshot_20200209_104921.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/client.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.idea/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.idea/server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/server/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/server/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/server/settings/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../server/server/settings/base.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="oQtGAKkK" />
+  </component>
   <component name="ProjectId" id="1Wcet8aQ4g3bGEkTQreeoAQ2fIO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/server/settings/dev.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RunManager" selected="Django server.Server">
+    <configuration name="Server + Client" type="CompoundRunConfigurationType">
+      <toRun name="Server" type="Python.DjangoServer" />
+      <toRun name="Client" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="Server" type="Python.DjangoServer" />
+      <toRun name="Client" type="js.build_tools.npm" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Server" type="Python.DjangoServer" factoryName="Django server">
+      <module name="server" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="server.settings.dev" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Compound.Server + Client" />
+      <item itemvalue="Django server.Server" />
+      <item itemvalue="npm.Client" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="501c3f46-cdbb-4801-872d-8b4fb0df2412" name="Default Changelist" comment="" />
+      <created>1581682549366</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581682549366</updated>
+      <workItem from="1581682550834" duration="7960000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="447" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581688086942">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state x="447" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/56.30.1864.1050@56.30.1864.1050" timestamp="1581688086942" />
+    <state x="519" y="147" key="CommitChangelistDialog2" timestamp="1581690672345">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state x="519" y="147" key="CommitChangelistDialog2/56.30.1864.1050@56.30.1864.1050" timestamp="1581690672345" />
+    <state x="772" y="311" key="FileChooserDialogImpl" timestamp="1581688067994">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state x="772" y="311" key="FileChooserDialogImpl/56.30.1864.1050@56.30.1864.1050" timestamp="1581688067994" />
+    <state width="1818" height="351" key="GridCell.Tab.0.bottom" timestamp="1581690032506">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.0.bottom/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032506" />
+    <state width="1818" height="351" key="GridCell.Tab.0.center" timestamp="1581690032506">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.0.center/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032506" />
+    <state width="1818" height="351" key="GridCell.Tab.0.left" timestamp="1581690032505">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.0.left/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032505" />
+    <state width="1818" height="351" key="GridCell.Tab.0.right" timestamp="1581690032506">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.0.right/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032506" />
+    <state width="1818" height="351" key="GridCell.Tab.1.bottom" timestamp="1581690032507">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.1.bottom/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032507" />
+    <state width="1818" height="351" key="GridCell.Tab.1.center" timestamp="1581690032507">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.1.center/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032507" />
+    <state width="1818" height="351" key="GridCell.Tab.1.left" timestamp="1581690032506">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.1.left/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032506" />
+    <state width="1818" height="351" key="GridCell.Tab.1.right" timestamp="1581690032507">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state width="1818" height="351" key="GridCell.Tab.1.right/56.30.1864.1050@56.30.1864.1050" timestamp="1581690032507" />
+    <state x="470" y="188" key="SettingsEditor" timestamp="1581688070410">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state x="470" y="188" key="SettingsEditor/56.30.1864.1050@56.30.1864.1050" timestamp="1581688070410" />
+    <state x="651" y="261" width="672" height="678" key="search.everywhere.popup" timestamp="1581689058808">
+      <screen x="56" y="30" width="1864" height="1050" />
+    </state>
+    <state x="651" y="261" width="672" height="678" key="search.everywhere.popup/56.30.1864.1050@56.30.1864.1050" timestamp="1581689058808" />
   </component>
 </project>

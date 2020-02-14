@@ -4,31 +4,38 @@ import Helmet from "preact-helmet";
 import Markup from "preact-markup";
 import { useEffect, useState } from "preact/hooks";
 import { getPage, isHomePage, Page } from "../../api";
+import { usePage } from "../../api/hooks";
 import StreamBlock from "../../components/StreamBlock";
 
 interface Props {
 }
 
 const Home: preact.FunctionalComponent<Props> = props => {
-  const [data, setData] = useState<Page | null>(null);
-  useEffect(() => {
-    getPage(3).then(setData);
-  }, []);
-  if (!data) {
+  const {loading, error, pageData} = usePage(3);
+  if(error) {
+    return <Hero.Hero>
+      <Hero.Body>
+        <p class="has-text-centered is-error">Erreur:</p>
+        <pre><code>{JSON.stringify(error)}</code></pre>
+      </Hero.Body>
+    </Hero.Hero>
+  }
+
+  if (loading) {
     return <Hero.Hero>
       <Hero.Body>
         <p class="has-text-centered">Loading...</p>
       </Hero.Body>
     </Hero.Hero>
   }
-  if (isHomePage(data)) {
+  if (isHomePage(pageData)) {
     return (<Fragment>
-        <Helmet title={data?.meta.seoTitle ?? data?.title ?? "TAT"}/>
+        <Helmet title={pageData?.meta.seoTitle ?? pageData?.title ?? "TAT"}/>
         <Hero.Hero color="primary" bold={true}>
           <Hero.Body>
             <Container>
-              <h1 class="title">{data?.title}</h1>
-              <h2 class="subtitle"><Markup class="content" markup={data.subtitle}/></h2>
+              <h1 class="title">{pageData?.title}</h1>
+              <h2 class="subtitle"><Markup class="content" markup={pageData.subtitle}/></h2>
               <div class="columns is-mobile">
                 <div class="column is-half is-offset-3">
                   <Field hasAddons={true}>
@@ -42,7 +49,7 @@ const Home: preact.FunctionalComponent<Props> = props => {
             </Container>
           </Hero.Body>
         </Hero.Hero>
-        {data.content.map(s => (
+        {pageData.content.map(s => (
           <Section><StreamBlock block={s}/></Section>))}
       </Fragment>
     );
