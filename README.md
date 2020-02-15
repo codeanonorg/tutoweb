@@ -80,3 +80,123 @@ L'étudiant en PACES, conservera donc **les mêmes repères**.
 C'était l'une de nos garanties, le code sera documenté pour que la passation du code entre les différents webmasters se fassent dans les **meilleures conditions**
 
 A tout moment du développement, les webmasters peuvent nous poser leurs questions par mail à l'adresse contact'at'codeanon.org ou sur notre serveur Discord.
+
+# Déploiement de l'environnement de production
+On supposera que l'on part d'une installation fraîche d'un système linux *Debian-based* et que nous travaillons depuis un utilisateur non root.
+## Avant-propos
+Wagtail est assez complet pour gérer la partie client et la partie serveur, cependant, la séparation des deux a été choisi pour principalement deux raisons :
+
+  - Plus de **sécurité**. En effet seules les parties nécessaires de l'API seront importées par le client, diminuant le risque de vulnérabilités (notamment par injection) 
+  - Plus de **performance**, grâce au développement de *librairies d'interfaces* sur mesure côté client.
+  Ainsi, il n'y aura pas de manipulation de code html directement, car les librairie d'interfaces feront le lien entre le code html et css (ce dernier étant travaillé avec *Bulma*)
+
+## Prérequis
+### Côté Serveur
+  1. **Installation de Python3.8 :**
+  Il s'agit du principal langage de programmation qui sera utilisé.
+  ```sh
+  sudo apt-get update && sudo apt-get install python3.8
+  ```
+  2. **Installation de Pip :**
+  Pip nous permettra d'installer des paquets à destination de Python.
+  ```sh
+  sudo apt-get install python3-pip
+  ```
+  3. **Mise à jour de Pip :**
+  La balise `user` permet d'appliquer la mise à jour au seul utilisateur pour ne pas casser le système.
+  ```sh
+  python3 -m pip install pip --upgrade --user
+  ```
+  4. **Installation de Pipenv :**
+  Pipenv a pour but de créer un environnement virtuel rassemblant toutes les dépendances nécessaires au bon développement du serveur.
+  ```sh
+  python3 -m pip install pipenv --user
+  ```
+  5. **Installation de Git**
+  Git nous permettra de disposer des dernières versions du projet, ainsi que de les partager aux autres collaborateurs.
+  ```sh
+  sudo apt-get install git
+  ```
+
+### Côté Client
+ 1. **Installation du gestionnaire de paquets pour NodeJs :**
+ (l'équivalent de pip pour python)
+ ```sh
+ sudo apt-get install npm
+ ```
+ 2. **Installation du gestionnaire de paquet Yarn :**
+ Bien plus performant que le gestionnaire `npm`
+ ```sh
+ sudo npm install -g yarn
+ ```
+## Déploiement
+ 1. On crée et se place dans le répertoire `~/Git/`
+ ```sh
+ cd && mkdir Git && cd Git
+ ```
+ 2. On clone le *repo github* associé au projet (on effectue une copie du projet dans notre dossier Git depuis la plateforme distante github)
+ ```sh
+ git clone https://github.com/codeanonorg/tutoweb.git
+ ```
+## Configuration 
+### Côté Serveur
+ 1. On se place dans le dossier `server` du repo github cloné
+ ```sh
+ cd ~/Git/tutoweb/server
+ ```
+ 2. Installons les dépendances
+ ```
+ pipenv install --dev
+ ```
+ Voici la sortie obtenue dans le terminal :
+ ```sh
+ ~/Git/tutoweb/server$ pipenv install --dev
+ Creating a virtualenv for this project…
+ Pipfile: /home/adam/Git/tutoweb/server/Pipfile
+ Using /usr/bin/python3.8 (3.8.0) to create virtualenv…
+ ⠏ Creating virtual environment...
+ ✔ Successfully created virtual environment! 
+ Virtualenv location: /home/adam/.local/share/virtualenvs/server-UkxjYTC3
+ Installing dependencies from Pipfile.lock (503f07)…
+   🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 22/22 — 00:01:38
+ To activate this project's virtualenv, run pipenv shell.
+ Alternatively, run a command inside the virtualenv with pipenv run.
+ ```
+### Côté Client
+Le principe est le même que pour le serveur, les commandes sont justes différentes :
+```sh
+cd ~/Git/tutoweb/client
+# Pour les dépendances
+yarn install
+```
+## Initialisation
+### Côté Serveur
+> **Attention :** cette configuration devra être reproduite à chaque fois que le repo github sera cloné. Cependant, vous ne devriez pas avoir besoin de cloner le repo en plus de la manipulation effectuée précédemment
+
+ 1. Génération de la base de données (BDD) **locale**:
+ ```sh
+ pipenv run ./manage.py migrate (génère bdd)
+ ```
+ 2. Création de l'administrateur de la BDD
+ > L'email ne sera pas vérifié, on peut donc rentrer n'importe quoi
+  ```sh
+ pipenv run ./manage.py createsuperuser --email <email_random> --username <username>
+ ```
+### Côté Client
+Il n'y a rien a faire !
+## Lancement
+Pour lancer le serveur, il suffit de taper depuis le dossier `server` la commande  `pipenv run ./manage.py runserver`. Cela exécutera le serveur ainsi que ses dépendances dans un shell temporaire lié au process. 
+> Si l'on souhaite avoir un shell permanent virtualisant l'environnment de production, on pourra alors taper `pipenv shell` et exécuter les commandes dans le shell ainsi obtenu.
+>
+L'interface wagtail sera accessible depuis un navigateur (présent sur la machine hébergeant le serveur) à l'adresse http://localhost:8000/
+
+L'interface d'administration se trouve quant à elle à l'adresse http://localhost:8000/admin. Une fois que les identifiants administrateurs précédemment crées sont rentrés, le panel administrateur s'affiche.
+
+> C'est ici que sera géré le contenu du site web (pages, photos, news, base de données). 
+> En réalité pendant la phase de développement, peu de code sera écrit concernant cette partie. Le gros du travail concernera la partie *client*.
+
+> Le format des pages web telles qu'affichées se trouvnera dans le dossier `server/route`
+
+Pour démarrer le client, il suffit de taper depuis le dossier `client` la commande `yarn dev`.
+
+Pour accéder à l'interface, il suffira alors d'ouvrir le navigateur sur la machine hébergeant le client, puis de se rendre à l'adresse http://localhost:8080/
