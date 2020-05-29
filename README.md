@@ -186,8 +186,8 @@ yarn install
 ### Côté Client
 Il n'y a rien a faire !
 ## Lancement
-Pour lancer le serveur, il suffit de taper depuis le dossier `server` la commande  `pipenv run ./manage.py runserver`. Cela exécutera le serveur ainsi que ses dépendances dans un shell temporaire lié au process. 
-> Si l'on souhaite avoir un shell permanent virtualisant l'environnment de production, on pourra alors taper `pipenv shell` et exécuter les commandes dans le shell ainsi obtenu.
+Pour lancer le serveur, il suffit de taper depuis le dossier `server` la commande  `python3 -m pipenv run ./manage.py runserver`. Cela exécutera le serveur ainsi que ses dépendances dans un shell temporaire lié au process. 
+> Si l'on souhaite avoir un shell permanent virtualisant l'environnment de production, on pourra alors taper `python3 -m pipenv shell` et exécuter les commandes dans le shell ainsi obtenu.
 >
 L'interface wagtail sera accessible depuis un navigateur (présent sur la machine hébergeant le serveur) à l'adresse http://localhost:8000/
 
