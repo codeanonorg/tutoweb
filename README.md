@@ -97,6 +97,7 @@ Wagtail est assez complet pour gérer la partie client et la partie serveur, cep
   ```sh
   sudo apt-get update && sudo apt-get install python3.8
   ```
+  > Note : Il se peut que l'installation de python3.8 ne soit pas aussi simple sous Debian 10, auquel cas, référez-vous à ce tutoriel : https://linuxize.com/post/how-to-install-python-3-8-on-debian-10/
   2. **Installation de Pip :**
   Pip nous permettra d'installer des paquets à destination de Python.
   ```sh
