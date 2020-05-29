@@ -106,7 +106,7 @@ Wagtail est assez complet pour gérer la partie client et la partie serveur, cep
   3. **Mise à jour de Pip :**
   La balise `user` permet d'appliquer la mise à jour au seul utilisateur pour ne pas casser le système.
   ```sh
-  python3 -m pip install pip --upgrade --user
+  python3.8 -m pip install pip --upgrade --user
   ```
   4. **Installation de Pipenv :**
   Pipenv a pour but de créer un environnement virtuel rassemblant toutes les dépendances nécessaires au bon développement du serveur.
@@ -147,7 +147,7 @@ Wagtail est assez complet pour gérer la partie client et la partie serveur, cep
  ```
  2. Installons les dépendances
  ```
- pipenv install --dev
+ python3.8 -m pipenv install --dev
  ```
  Voici la sortie obtenue dans le terminal :
  ```sh
