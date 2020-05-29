@@ -147,7 +147,7 @@ Wagtail est assez complet pour gérer la partie client et la partie serveur, cep
  ```
  2. Installons les dépendances
  ```
- python3.8 -m pipenv install --dev
+ python3 -m pipenv install --dev
  ```
  Voici la sortie obtenue dans le terminal :
  ```sh
@@ -176,12 +176,12 @@ yarn install
 
  1. Génération de la base de données (BDD) **locale**:
  ```sh
- pipenv run ./manage.py migrate (génère bdd)
+ python3 -m pipenv run ./manage.py migrate (génère bdd)
  ```
  2. Création de l'administrateur de la BDD
  > L'email ne sera pas vérifié, on peut donc rentrer n'importe quoi
   ```sh
- pipenv run ./manage.py createsuperuser --email <email_random> --username <username>
+ python3 -m pipenv run ./manage.py createsuperuser --email <email_random> --username <username>
  ```
 ### Côté Client
 Il n'y a rien a faire !
