@@ -1,5 +1,6 @@
 import { FunctionalComponent, h } from "preact";
 import { Card, Container } from "preact-bulma";
+// @ts-ignore
 import Markup from "preact-markup";
 import { useEffect, useState } from "preact/hooks";
 import {
@@ -23,7 +24,9 @@ function RichTextBlock(block: IRichTextBlock) {
 function AnnounceBlock(block: IAnnounceBlock) {
   const [image, setImage] = useState<Image | null>(null);
   useEffect(() => {
-    getImage(block.value.image).then(setImage)
+    if (typeof block.value.image !== "undefined") {
+      getImage(block.value.image).then(setImage)
+    }
   }, [block.value.image]);
   return <Container><Card.Card>
     <Card.Header title={block.value.title}/>

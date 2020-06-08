@@ -45,7 +45,7 @@ export interface RichTextBlock extends StreamBlock<string> {
 
 interface Announce {
   title: string;
-  image: number;
+  image?: number;
   content: string;
 }
 
