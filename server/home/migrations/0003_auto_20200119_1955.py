@@ -9,7 +9,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
     dependencies = [
         ('wagtailcore', '0041_group_collection_permissions_verbose_name_plural'),
-        ('home', '0002_create_homepage'),
+        ('home', '0001_initial'),
     ]
 
     operations = [

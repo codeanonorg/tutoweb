@@ -17,7 +17,8 @@ class HomePage(Page):
     api_fields = [APIField("subtitle"), APIField("content")]
     subtitle = fields.RichTextField(max_length=80)
     content = fields.StreamField(
-        [("rich_text", RichTextBlock()), ("announce", blocks.AnnouncementBlock())]
+        [("rich_text", RichTextBlock()), ("announce", blocks.AnnouncementBlock())],
+        blank=True, null=True
     )
 
 
@@ -25,5 +26,6 @@ class FlexiblePage(Page):
     api_fields = [APIField("content")]
     content_panels = Page.content_panels + [StreamFieldPanel("content")]
     content = fields.StreamField(
-        [("rich_text", RichTextBlock()), ("fullsize_img", ImageChooserBlock()),]
+        [("rich_text", RichTextBlock()), ("fullsize_img", ImageChooserBlock()),],
+        null=True
     )

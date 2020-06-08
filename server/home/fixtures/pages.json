@@ -1,0 +1,10 @@
+[
+  {
+    "model": "home.homepage",
+    "pk": 3,
+    "fields": {
+      "subtitle": "<p><i>\u00ab De la solidarit\u00e9 au succ\u00e8s. \u00bb</i></p>",
+      "content": "[{\"type\": \"announce\", \"value\": {\"title\": \"Sondage TAT 2020\", \"image\": null, \"content\": \"<p>Si tu ne l&#x27;as pas encore vu, nous avons r\\u00e9alis\\u00e9 un sondage dans le but de conna\\u00eetre ton ressenti sur ton ann\\u00e9e au Tutorat. Nous avons besoin de toi pour y r\\u00e9pondre ! <br/>Cela ne te prendra pas plus de 5 minutes.</p><p>C&#x27;est l&#x27;occasion pour toi de donner ton avis  sur les diff\\u00e9rents services du TAT, afin qu&#x27;on puisse consolider les  points positifs, et qu&#x27;on am\\u00e9liore les points qui t&#x27;ont moins plu.</p><ul><li><a href=\\\"https://forms.gle/c4D1ffh4ndtpvUmb6\\\">https://forms.gle/c4D1ffh4ndtpvUmb6</a></li></ul><p>N&#x27;h\\u00e9site pas si tu as besoin de nous, nous sommes toujours l\\u00e0 pour toi, jusqu&#x27;\\u00e0 la fin de l&#x27;ann\\u00e9e !<br/></p><p>Tendresse, Amour et Tutorat </p>\"}, \"id\": \"31235488-c2bc-4a33-a27c-7f14b92e9a1a\"}]"
+    }
+  }
+]
