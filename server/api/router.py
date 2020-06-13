@@ -2,28 +2,28 @@ from django.conf import settings
 from django.conf.urls import url
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
-from wagtail.api.v2.endpoints import BaseAPIEndpoint, PagesAPIEndpoint as WagtailPagesAPIEndpoint
 from wagtail.api.v2.router import WagtailAPIRouter
 from wagtail.api.v2.serializers import PageSerializer
+from wagtail.api.v2.views import PagesAPIViewSet as WagtailPagesAPIViewSet
 
 from home.models import HomePage
 
 api_router = WagtailAPIRouter("wagtailapi")
 
 
-class BasePagesAPIEndpoint(WagtailPagesAPIEndpoint):
+class BasePagesAPIViewSet(WagtailPagesAPIViewSet):
     required_scopes = ['read']
 
     base_serializer_class = PageSerializer
 
-    meta_fields = WagtailPagesAPIEndpoint.meta_fields + [
+    meta_fields = WagtailPagesAPIViewSet.meta_fields + [
         'html_url',
         'url_path',
         'slug',
     ]
 
 
-class PagesAPIEndpoint(BasePagesAPIEndpoint):
+class PagesAPIViewSet(BasePagesAPIViewSet):
     """
     Gets live content.
     """
@@ -46,7 +46,7 @@ class PagesAPIEndpoint(BasePagesAPIEndpoint):
     @classmethod
     def get_urlpatterns(cls):
         """
-        Extends the default Wagtail list of endpoints.
+        Extends the default Wagtail list of viewsets.
         """
         url_patterns = list(super().get_urlpatterns())
         url_patterns.append(
@@ -55,9 +55,9 @@ class PagesAPIEndpoint(BasePagesAPIEndpoint):
         return url_patterns
 
 
-class PreviewPagesAPIEndpoint(BasePagesAPIEndpoint):
+class PreviewPagesAPIViewSet(BasePagesAPIViewSet):
     """
-    Same as Pages API Endpoint but returns page content related to a revision.
+    Same as Pages API ViewSet but returns page content related to a revision.
     """
 
     def get_queryset(self):
@@ -93,5 +93,5 @@ class PreviewPagesAPIEndpoint(BasePagesAPIEndpoint):
         ]
 
 
-api_router.register_endpoint('pages', PagesAPIEndpoint)
-api_router.register_endpoint('preview-pages', PreviewPagesAPIEndpoint)
+api_router.register_endpoint('pages', PagesAPIViewSet)
+api_router.register_endpoint('preview-pages', PreviewPagesAPIViewSet)

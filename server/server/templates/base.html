@@ -1,7 +1,7 @@
 {% load static wagtailuserbar %}
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>
@@ -18,7 +18,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/server.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bulma.css' %}">
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -28,10 +28,11 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        {% block header %}{% include "include/navbar.html" %}{% endblock %}
+
         {% block content %}{% endblock %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/server.js' %}"></script>
+        <script src="{% static 'js/navbar.js' %}"></script>
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}

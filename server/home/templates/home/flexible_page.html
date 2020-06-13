@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block header %}
+  <header class="hero is-primary is-bold">
+    <div class="hero-head">{{ block.super }}</div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="h1 title">{{ page.title }}</div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <main class="section">
+    <div class="section">
+      {% for block in page.content %}
+        <div class="section">
+          <div class="container">
+            <div class="content">{% include_block block %}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}
