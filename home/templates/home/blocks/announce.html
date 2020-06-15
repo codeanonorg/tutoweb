@@ -1,8 +1,15 @@
 {% load wagtailcore_tags wagtailimages_tags %}
+
 <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">{% image value.image width-400 height-300 %}</figure>
+  <div class="card-header">
+    <div class="card-header-icon"><i class="mdi mdi-information"></i></div>
+    <div class="card-header-title">{{ value.title }}</div>
   </div>
+  {% if value.image %}
+    <div class="card-image">
+      <figure class="image is-4by3">{% image value.image width-400 height-300 %}</figure>
+    </div>
+  {% endif %}
   <div class="card-content">
     <div class="media">
       <div class="content">{{ value.content | richtext }}</div>
