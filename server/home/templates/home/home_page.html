@@ -13,6 +13,9 @@
       </div>
     </div>
   </header>
+{% endblock header %}
+
+{% block content %}
   <main>
     {% for block in page.content %}
       <section class="section">
@@ -22,4 +25,4 @@
       </section>
     {% endfor %}
   </main>
-{% endblock header %}
+{% endblock %}
