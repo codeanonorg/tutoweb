@@ -19,14 +19,17 @@
     </div>
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
+        <form action="{% url 'search' %}" method="get">
+          <div class="field has-addons">
+            <div class="control">
+              <label class="is-invisible" for="query">Rechercher</label>
+              <input class="input" type="text" name="query" id="query" placeholder="Recherche">
+            </div>
+            <div class="control">
+              <button class="button is-inverted is-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>

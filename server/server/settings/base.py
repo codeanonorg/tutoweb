@@ -16,7 +16,6 @@ import os
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'modelcluster',
     'taggit',
     'corsheaders',
+    'sass_processor',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -89,7 +89,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'server.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -99,7 +98,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -118,7 +116,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -147,11 +144,20 @@ CORS_URLS_REGEX = r'^/api'
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
 ]
 
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, 'static'),
 ]
+
+# SASS configure
+
+SASS_PROCESSOR_INCLUDE_PATHS = [
+    os.path.join(BASE_DIR, "node_modules")
+]
+SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'.s[ac]ss$'
+SASS_OUTPUT_STYLE = 'compact'
 
 # ManifestStaticFilesStorage is recommended in production, to prevent outdated
 # Javascript / CSS assets being served from cache (e.g. after a Wagtail upgrade).
@@ -163,7 +169,6 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(PROJECT_DIR, '.media')
 MEDIA_URL = '/media/'
-
 
 # Wagtail settings
 
