@@ -40,4 +40,5 @@
 
 - [ ] Newsletter
 - [ ] Moteur de recherche interne
-Bonus : - [ ] Langues (voir s'il n'y a pas une API de traduction instantannée, je sais pas)
+Bonus : 
+- [ ] Langues (voir s'il n'y a pas une API de traduction instantannée, je sais pas)
