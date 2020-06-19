@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.get_full_name }}{% endblock %}
+
+{% block header %}
+  <header class="hero">
+    <div class="hero-head">{{ block.super }}</div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="level">
+          <div class="level-left">
+            <div class="level-item">
+              <figure class="image is-128x128">
+                <img src="{{ object.wagtail_userprofile.avatar.url }}"
+                     alt="{{ object.username }}"
+                     class="is-rounded">
+              </figure>
+            </div>
+          </div>
+          <div class="level-item">
+            <div class="container">
+              <h1 class="title is-3">{{ object.get_full_name }}</h1>
+              <h2 class="subtitle is-5">{{ object.username }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="content">{% lorem 10 %}</div>
+  </div>
+{% endblock %}
