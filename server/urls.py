@@ -1,25 +1,24 @@
 from django.conf import settings
-from django.conf.urls import include, url
 from django.contrib import admin
-
+from django.urls import path, include
 from wagtail.admin import urls as wagtailadmin_urls
-from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
 from server.api import api_router
 
 urlpatterns = [
-    url(r'^django-admin/', admin.site.urls),
-    url(r'^api/v2/', api_router.urls),
-    url(r'^admin/', include(wagtailadmin_urls)),
-    url(r'^documents/', include(wagtaildocs_urls)),
+    path('django-admin/', admin.site.urls),
+    path('api/v2/', api_router.urls),
+    path('admin/', include(wagtailadmin_urls)),
+    path('documents/', include(wagtaildocs_urls)),
 
-    url(r'^search/$', search_views.search, name='search'),
+    path('search/', search_views.search, name='search'),
 
-    url(r'', include("home.urls")),
+    path("", include("user.urls")),
+
+    path('', include("home.urls")),
 ]
-
 
 if settings.DEBUG:
     from django.conf.urls.static import static

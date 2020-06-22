@@ -22,4 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Destroy notification with close buttons
+  const $notificationDeleteButtons = document.querySelectorAll(".notification .delete");
+  $notificationDeleteButtons.forEach(n => console.log("notification delete", n));
 });

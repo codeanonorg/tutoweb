@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <header class="hero is-primary is-bold is-fullheight">
+    <div class="hero head">{{ block.super }}</div>
+    <div class="hero-body">
+      {% block transitive %}{% endblock %}
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

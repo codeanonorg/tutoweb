@@ -31,11 +31,10 @@
 {% wagtailuserbar %}
 
 {% block header %}{% include "include/navbar.html" %}{% endblock %}
-
+<section class="section">{% include "include/messages.html" %}</section>
 <main class="section">{% block content %}{% endblock %}</main>
 
-<script src="{% static 'js/navbar.js' %}"></script>
-
+<script src="{% static 'js/interaction-base.js' %}"></script>
 {% block extra_js %}
   {# Override this in templates to add extra javascript #}
 {% endblock %}

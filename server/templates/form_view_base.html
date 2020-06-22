@@ -1,0 +1,14 @@
+{% extends "transitive_base.html" %}
+{% load bulma_tags %}
+
+{% block transitive %}
+  <div class="container">
+    <h1 class="title">{{ title }}</h1>
+    <p class="subtitle">{{ subtitle|safe|default:"" }}</p>
+    <form{% if action %} action="{{ action }}"{% endif %}{% if method %} method="{{ method }}"{% endif %}>
+      {% csrf_token %}
+      {{ form|bulma }}
+      <button type="submit" class="button is-primary">Valider</button>
+    </form>
+  </div>
+{% endblock %}
