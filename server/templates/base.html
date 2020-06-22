@@ -11,7 +11,7 @@
     {% endblock %}
     {% block title_suffix %}
       {% with self.get_site.site_name as site_name %}
-        {% if site_name %}- {{ site_name }}{% endif %}
+        {% if site_name %}- {{ site_name }}{% else %}- Tutorat Associatif Toulousain{% endif %}
       {% endwith %}
     {% endblock %}
   </title>
@@ -31,11 +31,10 @@
 {% wagtailuserbar %}
 
 {% block header %}{% include "include/navbar.html" %}{% endblock %}
-
+<section class="section">{% include "include/messages.html" %}</section>
 <main class="section">{% block content %}{% endblock %}</main>
 
-<script src="{% static 'js/navbar.js' %}"></script>
-
+<script src="{% static 'js/interaction-base.js' %}"></script>
 {% block extra_js %}
   {# Override this in templates to add extra javascript #}
 {% endblock %}

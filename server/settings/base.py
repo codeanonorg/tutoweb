@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+from django.urls import reverse_lazy as reverse
+
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
@@ -25,6 +27,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     'api',
     'home',
+    'user',
     'search',
 
     'wagtail.contrib.forms',
@@ -44,6 +47,7 @@ INSTALLED_APPS = [
     'taggit',
     'corsheaders',
     'sass_processor',
+    'bulma',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -130,6 +134,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = reverse("user:login")
+LOGOUT_URL = reverse("user:logout")
+LOGIN_REDIRECT_URL = LOGOUT_REDIRECT_URL = "/"
+
 # CORS
 
 CORS_ORIGIN_WHITELIST = [
@@ -153,9 +161,6 @@ STATICFILES_DIRS = [
 
 # SASS configure
 
-SASS_PROCESSOR_INCLUDE_PATHS = [
-    os.path.join(BASE_DIR, "node_modules")
-]
 SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'.s[ac]ss$'
 SASS_OUTPUT_STYLE = 'compact'
 

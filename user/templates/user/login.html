@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bulma_tags %}
+
+{% block header %}
+  <header class="hero is-primary is-bold is-fullheight">
+    <div class="hero head">{{ block.super }}</div>
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Se connecter</h1>
+        <p class="subtitle">Pas de compte ? <a href="{% url "user:signup" %}">Créez-en vous un dès maintenant</a> !</p>
+        <div class="form-wrapper">
+          <form action="{% url "user:login" %}" method="post">
+            {% csrf_token %}
+            {{ form|bulma }}
+            <button type="submit" class="button is-primary">Valider</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
