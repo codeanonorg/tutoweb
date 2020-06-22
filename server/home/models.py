@@ -8,8 +8,8 @@ class HomePage(Page):
     templates = "home/home_page.html"  # Localisation du template de la page d'accueil
     max_count = 1  # Pas besoin de plus d'une page d'accueil
     banner_title = models.CharField(max_length=100, blank=False, null=True)  # Champ Django...
-    content_panels = Page.content_panels + [  # ... necessitant un content_panels pour le modifier depuis le panel admin
-        FieldPanel("banner_title")
+    content_panels = Page.content_panels + [                                 # ... necessitant un content_panels pour l'éditer depuis le panel admin
+        FieldPanel("banner_title") # Titre du champ d'édition
     ]
 
 # class FlexiblePage(Page):
