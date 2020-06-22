@@ -1,0 +1,36 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      Tutoweb
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="page-navbar">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="page-navbar" class="navbar-menu">
+    <div class="navbar-start">
+      {% for page in menu %}
+        <a href="{{ page.pageurl }}" class="navbar-item">{{ page.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <form action="{% url 'search' %}" method="get">
+          <div class="field has-addons">
+            <div class="control">
+              <label style="display: none" for="query">Rechercher</label>
+              <input class="input" type="text" name="query" id="query" placeholder="Recherche">
+            </div>
+            <div class="control">
+              <button class="button is-inverted is-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>

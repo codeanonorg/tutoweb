@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block header %}
+  <header class="hero is-primary is-bold">
+    <div class="hero-head">{{ block.super }}</div>
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">{{ page.title }}</h1>
+        <h2 class="subtitle content">{{ page.subtitle | richtext }}</h2>
+      </div>
+    </div>
+  </header>
+{% endblock header %}
+
+{% block content %}
+  <main>
+    {% for block in page.content %}
+      <section class="section">
+        <div class="container">
+          {% include_block block %}
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+{% endblock %}

@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+wagtail = "<3.0,>=2.9"
+Django = "<4.0,>=3.0"
+django-cors-headers = "<4.0,>=3.3"
+libsass = "<1.0,>=0.20"
+django-compressor = "<3.0,>=2.4"
+django-sass-processor = "<1.0,>=0.8"
+
+[requires]
+python_version = "3.8"
